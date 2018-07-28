@@ -1,17 +1,32 @@
 {
-  "name": "thal",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon",
+    "build": "webpack --mode production --config config/webpack.prod.config.js --env.NODE_ENV=production --progress",
+    "start:prod": "node server"
   },
-  "author": "",
-  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/preset-env": "^7.0.0-beta.54",
+    "@types/node": "^10.5.2",
+    "@types/node-fetch": "^2.1.2",
+    "@types/puppeteer": "^1.5.1",
+    "@types/yargs": "^11.1.1",
+    "awesome-typescript-loader": "^5.2.0",
+    "babel-loader": "^8.0.0-beta",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb-base": "^0.2.0",
+    "typescript": "^2.9.2",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.3"
+  },
   "dependencies": {
-    "node-mpv": "^1.4.2",
-    "node-persist": "^2.1.0",
-    "puppeteer": "^1.1.0",
-    "readline": "^1.3.0"
+    "node-fetch": "^2.2.0",
+    "prompt": "^1.0.0",
+    "prompt-input": "^3.0.0",
+    "puppeteer": "^1.6.1",
+    "yargs": "^12.0.1"
   }
 }
