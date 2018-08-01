@@ -37,7 +37,6 @@ const argv = yargs
   } else if (argv.play) {
     const res = await MasterAnime.search(argv.play)
     const slug = res[0].slug
-
     playAnime(slug, argv.episode)
   } else {
     console.log('You didnt provide enough arguments')
